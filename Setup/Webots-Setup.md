@@ -1,0 +1,56 @@
+# Pre Requirements
+
+## Verifying Graphics Driver Installation
+
+- Make sure that **Nvidia** driver was already installed in the PC, for more information please refers [here](https://cyberbotics.com/doc/guide/verifying-your-graphics-driver-installation).
+
+## Configure APT Repository
+
+- Add **Cyber Robotics**'s **APT** keys.
+  ``` sh
+  ~$ curl -s -L https://www.cyberbotics.com/Cyberbotics.asc | sudo apt-key add -
+  ```
+- Add **Cyber Robotics**'s **APT** repository.
+  ``` sh
+  ~$ sudo apt-add-repository 'deb https://www.cyberbotics.com/debian/ binary-amd64/'
+  ```
+- Update the **APT** repository using `sudo apt update` command.
+
+# Installation
+
+- Install as usual using `apt install` command.
+  ``` sh
+  ~$ sudo apt install webots
+  ```
+> **Note:** **Webots** requires large amount of space _(around 2 GB)_, so the installation process will take a lot of time.
+
+# Post Install
+
+- Run **Webots** from application launcher or from `webots` command.
+- On the first start you will be asked to chose theme and try some example simulation.
+
+> **Note:** If there is a warning about unsupported graphics driver, make sure that graphics drivers already installed properly as in [Pre Requirements](#Pre-Requirements) section. _(Although sometimes simulation could still be run without graphics driver installed)_.
+
+> **Note:** If you are new in **Webots** it is recommended to try the tutorial first in [here](https://cyberbotics.com/doc/guide/tutorials).
+
+# Configure Webots with Linux Environment
+
+> **Note:** For each new controller created, add a `WEBOTS_HOME` variable that contains path to the **Webots**'s controller in the controller's `Makefile` file.
+
+## Add Webots Home Path to Environmetn Variable
+
+- In your `~/.bashrc` file _(or `~/.zshrc` if using **Zsh**)_, add the following text in the bottom of the file to export WEBOTS_HOME environment variable that contains a path to **Webots** directory _(usually it is `/usr/local/webots`)_.
+  ``` sh
+  export WEBOTS_HOME=/usr/local/webots
+  ```
+- Reload the environment with `source` command.
+
+## Configure Webots Library Path
+- Create new file `webots.conf` inside `/etc/ld.so.conf.d/` and fill it with path to **Webots**'s library directory _(as in `$WEBOTS_HOME/lib`)_.
+- Reload the library path using `sudo ldconfig` command.
+
+## Configure Webots Include Path
+- Create a symbolic link from **Webots**'s include path to the default include path.
+  ``` sh
+  ~$ sudo ln -s $WEBOTS_HOME/include/controller/cpp/webots /usr/local/include/webots
+  ```
