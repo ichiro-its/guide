@@ -46,8 +46,12 @@
 - Reload the environment with `source` command.
 
 ## Configure Webots Library Path
-- Create new file `webots.conf` inside `/etc/ld.so.conf.d/` and fill it with path to **Webots**'s library directory _(as in `$WEBOTS_HOME/lib`)_.
-- Reload the library path using `sudo ldconfig` command.
+- Create a symbolic link from some of **Webots**'s library to the default library path.
+  ``` sh
+  ~$ sudo ln -s $WEBOTS_HOME/lib/webots/controller/libController.so.0 /usr/local/lib/libWebotsController.so.0
+  ~$ sudo ln -s $WEBOTS_HOME/lib/webots/controller/libCppController.so.0 /usr/local/lib/libWebotsCppController.so.0
+  ~$ sudo ln -s $WEBOTS_HOME/lib/webots/libpng12.so.0 /usr/local/lib/libpng12.so.0
+  ```
 
 ## Configure Webots Include Path
 - Create a symbolic link from **Webots**'s include path to the default include path.
