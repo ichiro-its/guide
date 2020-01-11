@@ -14,7 +14,7 @@
 
 - Download the **NVIDIA SDK Manager** from [here](https://developer.nvidia.com/nvidia-sdk-manager)
   _(a **NVIDIA Developer account** is needed to download it)_.
-- Install it with `dpkg -i <deb_file>` command.
+- Install it with `dpkg -i <deb_file>` command. Or you can follow the **Setting up** instructions in the Download page.
 
 ## Run NVIDIA SDK Manager
 
@@ -22,7 +22,7 @@
 - Login with **NVIDIA Developer account**.
 
 > **Note:** There is a small problem with **NVIDIA SDK Manager** that it won't work in **1366x768** or lower resolution *(the button and some bottom user interfaces are cropped in that resolution)*.
-> So either you could use another display with larger resolution or you could virtually create larger resolution above the maximum that is supported by the current display using **xrandr**.
+> So either you could use **Tab** button to scroll the page *(to appear the bottom user interfaces)*.
 
 # Configure Flash Options
 
@@ -30,7 +30,7 @@
 
 - In **Hardware Configuration**, choose **Jetson TX2 (P3310)** for the Target Hardware.
 - In **Target Operating System**, choose Linux JetPack with the most recent version
-  _(the last version used was **JetPack 4.2.2 (rev.1)**)_.
+  _(the last version used was **JetPack 4.3**)_.
 - Continue to the next step.
 
 ## Details and License
@@ -46,11 +46,7 @@
 - Enter the **superuser** password.
 - The **NVIDIA SDK Manager** will download required components and install it to the host.
 - After those processes finished, you will be prompted to connect the host with the **Jetson TX2**.
-- Then, you may choose to do either **Automatic Setup** _(for upgrade from previous version)_ or **Manual Setup** _(for fresh install)_.
-
-## Automatic Setup
-
-> **WIP**
+- Then, you may choose **Manual Setup** to do a fresh installation.
 
 ## Manual Setup
 
