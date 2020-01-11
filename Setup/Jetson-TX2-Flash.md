@@ -22,7 +22,7 @@
 - Login with **NVIDIA Developer account**.
 
 > **Note:** There is a small problem with **NVIDIA SDK Manager** that it won't work in **1366x768** or lower resolution *(the button and some bottom user interfaces are cropped in that resolution)*.
-> So either you could use **Tab** button to scroll the page *(to appear the bottom user interfaces)*.
+> So either you could use **Tab** button to scroll the page *(to display the bottom of truncated user interfaces)*.
 
 # Configure Flash Options
 
