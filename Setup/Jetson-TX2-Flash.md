@@ -46,7 +46,7 @@
 - Enter the **superuser** password.
 - The **NVIDIA SDK Manager** will download required components and install it to the host.
 - After those processes finished, you will be prompted to connect the host with the **Jetson TX2**.
-- Then, you may choose **Manual Setup** to do a fresh installation.
+- Then, you may choose a **Manual Setup** *(from its default choice, **Automatic Setup**)* to do a fresh installation.
 
 ## Manual Setup
 
