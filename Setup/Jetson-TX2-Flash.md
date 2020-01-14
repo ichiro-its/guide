@@ -21,8 +21,8 @@
 - Run **NVIDIA SDK Manager** with `sdkmanager` command or dirrectly from software launcher.
 - Login with **NVIDIA Developer account**.
 
-> **Note:** There is a small problem with **NVIDIA SDK Manager** that it won't work in **1366x768** or lower resolution *(the button and some bottom user interfaces are cropped in that resolution)*.
-> So either you could use **Tab** button to scroll the page *(to display the bottom of truncated user interfaces)*.
+> **Note:** There is problem with **NVIDIA SDK Manager** resolution that doesn't fit in **1366x768** or lower resolution *(the button and some bottom user interfaces are cropped in that resolution)*.
+> Use the **Tab** button to scroll down the page  *(to display the bottom of truncated user interfaces)*.
 
 # Configure Flash Options
 
@@ -45,21 +45,21 @@
 
 - Enter the **superuser** password.
 - The **NVIDIA SDK Manager** will download required components and install it to the host.
-- After those processes finished, you will be prompted to connect the host with the **Jetson TX2**.
-- Then, you may choose **Manual Setup** *(from its default choice, **Automatic Setup**)* to do a fresh installation.
+- After the download is finished, you will be prompted to connect the host with the **Jetson TX2**.
+- Choose **Manual Setup** for custom installation.
 
 ## Manual Setup
 
 - Boot the **Jetson TX2** in recovery mode by pressing the **Reset button** _(RES)_ while holding the **Recovery Force button** _(REC)_.
   After that, hold the **Recovery Force button** _(REC)_ for about 2 seconds.
 
-> **Note:** Recovery mode is indicated by both LEDs next to the **Recovery Force button** _(REC)_ turned on and the connected display is not showing anything.
+> **Note:** Recovery mode is indicated by both LEDs next to the **Recovery Force button** _(REC)_ are on and the connected display is not showing anything.
 
 > **Note:** Make sure the **Jetson TX2** is connected to the host with `lsusb` command _(indicated as **Nvidia Corp.**)_.
 
 - Click flash to continue.
 
-> **Note:** In case of failed _(device not connected or haven't set to recovery mode)_, reboot the **Jetson TX2** in recovery mode. If still failed, reboot the host.
+> **Note:** In case of failure _(device not connected or haven't set to recovery mode)_, reboot the **Jetson TX2** in recovery mode. Reboot the host if failure still happens.
 
 ## Ubuntu Setup
 
@@ -80,5 +80,5 @@
 
 # Post Flash
 
-- The **Jetson TX2** comes with some unused program that won't be used for developing like **LibreOffice**, **Thunderbird**, **Rhythmbox**, and **Shotwell**. You may remove them using `sudo apt remove <program>`.
+- The **Jetson TX2** comes with some unused programs that won't be used for developing like **LibreOffice**, **Thunderbird**, **Rhythmbox**, and **Shotwell**. You may remove them using `sudo apt remove <program>`.
 - Sometimes the clock is wrongly set. You may fix this manually using `sudo date -s "<DD> <MON> <YYYY> <HH>:<MM>:<SS>"` or automatically using `sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"` _(require an internet access)_.

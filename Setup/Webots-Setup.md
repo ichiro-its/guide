@@ -37,7 +37,7 @@
 
 > **Note:** For each new controller created, add a `WEBOTS_HOME` variable that contains path to the **Webots**'s controller in the controller's `Makefile` file.
 
-## Add Webots Home Path to Environmetn Variable
+## Add Webots Home Path to Environment Variable
 
 - In your `~/.bashrc` file _(or `~/.zshrc` if using **Zsh**)_, add the following text in the bottom of the file to export WEBOTS_HOME environment variable that contains a path to **Webots** directory _(usually it is `/usr/local/webots`)_.
   ``` sh
@@ -48,8 +48,8 @@
 ## Configure Webots Library Path
 - Create a symbolic link from some of **Webots**'s library to the default library path.
   ``` sh
-  ~$ sudo ln -s $WEBOTS_HOME/lib/webots/controller/libController.so.0 /usr/local/lib/libWebotsController.so.0
-  ~$ sudo ln -s $WEBOTS_HOME/lib/webots/controller/libCppController.so.0 /usr/local/lib/libWebotsCppController.so.0
+  ~$ sudo ln -s $WEBOTS_HOME/lib/controller/libController.so /usr/local/lib/libWebotsController.so
+  ~$ sudo ln -s $WEBOTS_HOME/lib/controller/libCppController.so /usr/local/lib/libWebotsCppController.so
   ~$ sudo ln -s $WEBOTS_HOME/lib/webots/libpng12.so.0 /usr/local/lib/libpng12.so.0
   ```
 
