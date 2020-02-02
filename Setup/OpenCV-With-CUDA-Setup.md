@@ -14,9 +14,10 @@
 
 # Build Process
 
-## Clone OpenCV Repository
+## Clone OpenCV and OpenCV_Contrib Repository
 
 - Clone this repository `https://github.com/opencv/opencv.git`.
+- Clone this repository `https://github.com/opencv/opencv_contrib`.
 - Change the branch to the most recent **4.2** version _(the last version used was **4.2.0**)_.
 
 ## Build OpenCV
@@ -26,6 +27,7 @@
   ``` sh
   ~$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX="/usr/local/" \
+      -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib \
       -D WITH_CUDA=ON \
       -D CUDA_ARCH_BIN=${ARCH_BIN} \
       -D CUDA_ARCH_PTX="" \
@@ -43,7 +45,7 @@
       OPENCV_GENERATE_PKGCONFIG=YES \
       ..
   ```
-- Build **OpenCV** with `make -j` command.
+- Build **OpenCV** with `make -j8` command.
 
 > **Note:** If there is a problem with **OpenGL** support, fix it with creating a new patch file which contain the following text:
 > ```
