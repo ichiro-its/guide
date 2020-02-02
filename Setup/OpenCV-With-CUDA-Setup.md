@@ -17,7 +17,7 @@
 ## Clone OpenCV Repository
 
 - Clone this repository `https://github.com/opencv/opencv.git`.
-- Change the branch to the most recent **3.4** version _(the last version used was **3.4.6**)_.
+- Change the branch to the most recent **4.2** version _(the last version used was **4.2.0**)_.
 
 ## Build OpenCV
 
@@ -37,6 +37,10 @@
       -D WITH_GSTREAMER_0_10=OFF \
       -D WITH_QT=ON \
       -D WITH_OPENGL=ON \
+      -D WITH_OPENCL=ON \
+      -D BUILD_opencv_python2=ON \
+      -D BUILD_opencv_python3=ON \
+      OPENCV_GENERATE_PKGCONFIG=YES \
       ..
   ```
 - Build **OpenCV** with `make -j` command.
