@@ -27,7 +27,7 @@
   ``` sh
   ~$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX="/usr/local/" \
-      -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib \
+      -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
       -D WITH_CUDA=ON \
       -D CUDA_ARCH_BIN=${ARCH_BIN} \
       -D CUDA_ARCH_PTX="" \
@@ -40,12 +40,12 @@
       -D WITH_QT=ON \
       -D WITH_OPENGL=ON \
       -D WITH_OPENCL=ON \
-      -D BUILD_opencv_python2=ON \
-      -D BUILD_opencv_python3=ON \
+      -D BUILD_opencv_python2=OFF \
+      -D BUILD_opencv_python3=OFF \
       OPENCV_GENERATE_PKGCONFIG=YES \
       ..
   ```
-- Build **OpenCV** with `make -j8` command.
+- Build **OpenCV** with `make -j$(nproc)` command.
 
 > **Note:** If there is a problem with **OpenGL** support, fix it with creating a new patch file which contain the following text:
 > ```
@@ -87,3 +87,10 @@
   /usr/local/lib
   ```
 - Reload library path using `sudo ldconfig` command.
+
+## Build OpenCV-python
+
+- Install **OpenCV-python** using `pip`
+  ``` sh
+  ~$ sudo pip install opencv-python
+  ```
