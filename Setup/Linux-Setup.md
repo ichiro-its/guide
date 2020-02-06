@@ -233,3 +233,36 @@ $ git clone https://github.com/dylanaraps/neofetch
 $ cd neofetch
 $ sudo make install
 ```
+### Assign a Static USB Port
+This part is a procedure to solve the problem where the USB port of devices on robot not properly connected with the program, especially ROS 2 program (framework). So, assign a static USB port to create a symbolic link for the USB device on robot is its solution. The devices port should be assign one by one, to do that follow these steps:
+- Unplug all of device from robot first
+- Plug only a device which want to assign
+- Find port where the device plugged in using (usually on `/dev/ttyUSBx`):
+```sh
+$ ls /dev/
+```
+where `x` is a number that match with the device port (ex. `/dev/ttyUSB0`).
+- List USB attributes for the device:
+```sh
+$ udevadm info --name=/dev/ttyUSBx --attribute-walk
+```
+- In the list, find an attribute that is unique for a device (check ans look idVendor or idProduct). Example:
+```sh
+  ...
+  ATTRS{idProduct}=="0002"
+  ATTRS{idVendor}=="1d6b"
+  ...
+```
+- Open (if there is nothing, just create) a file `/etc/udev/rules.d/99-usb-serial.rules`, and append a following line in that rule file:
+```sh
+KERNEL=="ttyUSB0", ATTRS{idVendor}=="1d6b", SYMLINK+="cm740"
+```
+set the kernel (i.e `ttyUSB0`), unique attribute using idVendor (i.e `1d6b`), and the name of the symbolic link (i.e `cm740`) which will be an assigned port name for the device (i.e CM740 device).
+
+> **Note**: If on the list of device attribute there is nothing both of two uniques above, the static assignment can be make based on the USB kernel (i.e `KERNELS=="1-4:1.0"`).
+> Then, in a file `/etc/udev/rules.d/99-usb-serial.rules`, append this following statement `KERNEL=="ttyUSB0", KERNELS=="1-4:1.0", SYMLINK+="cm740"` with the properly USB kernel of device
+
+- Reload the udevadm rules:
+```sh
+$ udevadm control --reload-rules
+```
