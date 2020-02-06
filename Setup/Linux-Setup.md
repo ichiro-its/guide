@@ -246,20 +246,19 @@ where `x` is a number that matches with the device port (ex. `/dev/ttyUSB0`).
 ```sh
 $ udevadm info --name=/dev/ttyUSBx --attribute-walk
 ```
-- In the list, find an attribute that is unique for a device (check and look idVendor or idProduct). Example:
+- In the list, look idVendor. Example:
 ```sh
   ...
-  ATTRS{idProduct}=="0002"
   ATTRS{idVendor}=="1d6b"
   ...
 ```
-- Open (if there is nothing, just create) a file `/etc/udev/rules.d/99-usb-serial.rules`, and append a following line in that rule file:
+- Open (if there is nothing, just create) a file `/etc/udev/rules.d/99-usb-serial.rules`, and append this following line in that rule file:
 ```sh
 KERNEL=="ttyUSB0", ATTRS{idVendor}=="1d6b", SYMLINK+="cm740"
 ```
 set the kernel (i.e `ttyUSB0`), unique attribute using idVendor (i.e `1d6b`), and the name of the symbolic link (i.e `cm740`) which will be an assigned port name for the device (i.e CM740 device).
 
-> **Note**: If on the list of device attribute there is nothing both of two uniques above, the static assignment can be make based on the USB kernel (i.e `KERNELS=="1-4:1.0"`).
+> **Note**: If on the list of device attribute there is nothing idVendor such as above, the static assignment can be make based on the USB kernel Id (i.e `KERNELS=="1-4:1.0"`).
 > Then, in a file `/etc/udev/rules.d/99-usb-serial.rules`, append this following statement `KERNEL=="ttyUSB0", KERNELS=="1-4:1.0", SYMLINK+="cm740"` with the properly USB kernel of device
 
 - Reload the udevadm rules:
