@@ -234,19 +234,19 @@ $ cd neofetch
 $ sudo make install
 ```
 ### Assign a Static USB Port
-This part is a procedure to solve the problem where the USB port of devices on robot not properly connected with the program, especially ROS 2 program (framework). So, assign a static USB port to create a symbolic link for the USB device on robot is its solution. The devices port should be assign one by one, to do that follow these steps:
-- Unplug all of device from robot first
-- Plug only a device which want to assign
+This part is a procedure to solve the problem where the USB port of devices on a robot not properly connected with the program, especially ROS 2 program (framework). So, assign a static USB port to create a symbolic link for the USB device on robot is its solution. The devices port should be assigned one by one, to do that follow these steps:
+- Unplug all of the devices from robot first
+- Plug only a device which wants to assign
 - Find port where the device plugged in using (usually on `/dev/ttyUSBx`):
 ```sh
 $ ls /dev/
 ```
-where `x` is a number that match with the device port (ex. `/dev/ttyUSB0`).
+where `x` is a number that matches with the device port (ex. `/dev/ttyUSB0`).
 - List USB attributes for the device:
 ```sh
 $ udevadm info --name=/dev/ttyUSBx --attribute-walk
 ```
-- In the list, find an attribute that is unique for a device (check ans look idVendor or idProduct). Example:
+- In the list, find an attribute that is unique for a device (check and look idVendor or idProduct). Example:
 ```sh
   ...
   ATTRS{idProduct}=="0002"
