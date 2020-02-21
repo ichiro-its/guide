@@ -11,4 +11,3 @@
 - [OpenCV Setup](Setup/OpenCV-Setup.md).
 - [ROS Setup](Setup/ROS-Setup.md).
 - [Webots Setup](Setup/Webots-Setup.md).
-- [Zsh With Oh My Zsh Setup](Setup/Zsh-With-Oh-My-Zsh-Setup.md).
