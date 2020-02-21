@@ -8,7 +8,7 @@
 
 - [Jetson TX2 Flash](Setup/Jetson-TX2-Flash.md).
 - [Linux Setup](Setup/Linux-Setup.md).
-- [OpenCV With CUDA Setup](Setup/OpenCV-With-CUDA-Setup.md).
+- [OpenCV Setup](Setup/OpenCV-Setup.md).
 - [ROS Setup](Setup/ROS-Setup.md).
 - [Webots Setup](Setup/Webots-Setup.md).
 - [Zsh With Oh My Zsh Setup](Setup/Zsh-With-Oh-My-Zsh-Setup.md).
