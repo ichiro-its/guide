@@ -45,7 +45,7 @@
   ``` sh
   ~$ rosdep install --from-paths ros2-linux/share --ignore-src --rosdistro dashing -y --skip-keys "console_bridge fastcdr fastrtps libopensplice67 libopensplice69 osrf_testing_tools_cpp poco_vendor rmw_connext_cpp rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp rti-connext-dds-5.3.1 tinyxml_vendor tinyxml2_vendor urdfdom urdfdom_headers"
   ```
-- Install **ROS2** build tools dependencies.
+  - Install **ROS2** build tools dependencies.
   ``` sh
   ~$ sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
   ```
@@ -53,12 +53,12 @@
   ``` sh
   ~$ sudo apt install python3-colcon-common-extensions
   ```
-- Install rm2-cyclone-dds-cpp package for **ROS2** DDS implementation.
+  - Install rm2-cyclone-dds-cpp package for **ROS2** DDS implementation.
     - install the package
-      ``` sh
-      ~$ sudo apt install ros-dashing-rmw-cyclonedds-cpp
-      ```
+    ``` sh
+    ~$ sudo apt install python3-colcon-common-extensions
+    ```
     - switch the rmw implementation
-      ``` sh
-      ~$ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-      ```
+    ``` sh
+    ~$ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+    ```
