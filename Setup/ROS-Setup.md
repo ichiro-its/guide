@@ -1,4 +1,4 @@
-# Installation and Configuration
+# ROS Setup
 
-- [ROS](ROS/ROS.md).
-- [ROS2](ROS/ROS2.md).
+- [ROS Melodic Setup](ROS/ROS.md).
+- [ROS2 Dashing Setup](ROS/ROS2-Dashing-Setup.md).

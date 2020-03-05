@@ -1,4 +1,4 @@
-# Installation and Configuration
+# Linux Setup
 
 ## Linux and Packages
 
