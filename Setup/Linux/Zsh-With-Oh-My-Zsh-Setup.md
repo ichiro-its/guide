@@ -33,15 +33,15 @@
   ```
 
 > **Note:** Most **Zsh** theme display uncommon characters.
-  It is recommended to use a font that support those characters in the terminal _(ex: [hermit font](https://pcaro.es/p/hermit/))_.
+  It is recommended to use a font that supports those characters in the terminal _(ex: [hermit font](https://pcaro.es/p/hermit/))_.
 
-# Add Extra Plugins _(Optional)_
+## Add Extra Plugins _(Optional)_
 
-## Extract Plugin
+### Extract Plugin
 
 - In `~/.zshrc`, add `extract` to `plugins` parameter _(separate each plugin with space)_.
 
-## Syntax Highlighting Plugin
+### Syntax Highlighting Plugin
 
 - Clone the **Zsh Syntax Highlighting** plugin to the **Zsh** plugin directory.
   ``` sh
@@ -49,7 +49,7 @@
   ```
 - In `~/.zshrc`, add `zsh-syntax-highlighting` to `plugins` parameter _(separate each plugin with space)_.
 
-## Auto Suggestions Plugin
+### Auto Suggestions Plugin
 
 - Clone the **Zsh Auto Suggestions** plugin to the **Zsh** plugin directory.
   ``` sh
@@ -57,8 +57,9 @@
   ```
 - In `~/.zshrc`, add `zsh-autosuggestions` to `plugins` parameter _(separate each plugins with space)_.
 
-### Reload Zsh
+## Reload Shell
 
-```sh
-~$ source ~/.zshrc
-```
+- Start a new terminal or execute this command for the changes to take effect.
+  ```sh
+  ~$ source ~/.zshrc
+  ```
