@@ -47,7 +47,7 @@
   ``` sh
   ~$ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
-- In `~/.zshr`, add `zsh-syntax-highlighting` to `plugins` parameter _(separate each plugin with space)_.
+- In `~/.zshrc`, add `zsh-syntax-highlighting` to `plugins` parameter _(separate each plugin with space)_.
 
 ## Auto Suggestions Plugin
 

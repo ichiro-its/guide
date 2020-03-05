@@ -8,7 +8,7 @@
 
 ## Linux Shell
 
-- [Zsh With Oh My Zsh Setup](Linux/Zsh.md).
+- [Zsh With Oh My Zsh Setup](Linux/Zsh-With-Oh-My-Zsh-Setup.md).
 
 ## Linux Port
 
