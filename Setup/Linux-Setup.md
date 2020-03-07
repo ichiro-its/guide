@@ -3,7 +3,7 @@
 ## Linux and Packages
 
 - [Linux](Linux/Linux.md).
-- [Git Setup](Linux/Linux.md).
+- [Git Setup](Linux/Git-Setup.md).
 - [Remote and File Sharing Setup](Linux/Remote.md).
 
 ## Linux Shell
