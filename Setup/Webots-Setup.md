@@ -58,3 +58,74 @@
   ``` sh
   ~$ sudo ln -s $WEBOTS_HOME/include/controller/cpp/webots /usr/local/include/webots
   ```
+
+# Installation from Source that Uses APT
+
+## Clone the Github Repository
+- Create the development directory in home directory and clone the repository.
+    ```sh
+    ~$ git config --global credential.helper store
+    ~$ git config --global user.email "you@example.com"
+    ~$ git config --global user.name "Your Name"
+    ~$ git config --global push.default simple
+    ~$ git clone --recurse-submodules -j8 https://github.com/cyberbotics/webots.git
+    ~$ cd webots
+    ```
+
+## Install Prerequisites Packages
+- Install the Webots dependencies.
+    ```sh
+    ~$ sudo scripts/install/linux_compilation_dependencies.sh
+    ```
+
+## Setup Your Bash Profile
+- Check the content of `scripts/install/bashrc.linux`.
+    ```sh
+    ~$ cat scripts/install/bashrc.linux >> ~/.bashrc
+    ```
+- Adapt the paths to match your system setup, and append it at the end of `~/.bashrc`.
+    ```sh
+    ~$ source ~/.bashrc
+    ```
+
+## Install Optional Dependencies [ optional ]
+- Install the Webots optional dependencies.
+    ```sh
+    ~$ sudo scripts/install/linux_optional_compilation_dependencies.sh
+    ```
+
+## Build Webots
+- Compile Webots and automatically download the required resources in the dependencies folder.
+    ```sh
+    ~$ make
+    ```
+
+> **Note**: if you find `fatal error: <library name>: No such file or directory`, it because the library is not installed yet.
+
+> **Note**: There are some possible libraries with their installation.
+1. `ft2build.h`
+    ```sh
+    ~$ sudo apt-get install libfreetype6-dev
+    ```
+2. `GL/gl.h`
+    ```sh
+    ~$ sudo apt install libglm-dev
+    ```
+3. `stb/stb_image.h` and `stb/stb_image_write.h`
+    ```sh
+    ~$ git clone https://github.com/nothings/stb.git
+    ~$ sudo cp stb/stb_image.h /usr/local/include/
+    ~$ sudo cp stb/stb_image_write.h /usr/local/include/
+    ```
+4. `libusb/libusb.h`
+    ```sh
+    ~$ sudo apt-get install libusb-dev
+    ```
+5. `libssh/libcrypto.h`
+    ```sh
+    ~$ sudo apt-get install libssl-dev
+    ```
+6. `zip.h`
+    ```sh
+    ~$ sudo apt-get install libzip-dev
+    ```
