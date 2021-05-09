@@ -59,7 +59,7 @@
   ~$ sudo ln -s $WEBOTS_HOME/include/controller/cpp/webots /usr/local/include/webots
   ```
 
-# Installation from Source that Uses APT
+# Installation from Source
 
 ## Clone the Github Repository
 - Create the development directory in home directory and clone the repository.
