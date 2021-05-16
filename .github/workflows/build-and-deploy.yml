@@ -1,7 +1,6 @@
 name: Build and Deploy Document
 on:
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch:
   push:
     branches: [ master ]
 jobs:
