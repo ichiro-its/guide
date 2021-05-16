@@ -1,6 +1,8 @@
-# Naming System
+# C++ Coding Standard
 
-## Variable
+## Naming System
+
+### Variable
 
 - Use **lower_case** naming system _(ex: `distance`, `kick_direction`)_.
 - For **class's attribute**, use **lower_case** with `m_` prefix _(ex: `m_device`, `m_nearest_player`)_.
@@ -11,7 +13,7 @@
 - For **global** variable, use **lower_case** with `g_` prefix _(ex: `g_standard_input`, `g_config`)_.
   > **Note:** For **global constant** variable, choose `g_` prefix instead of `k_` prefix or both prefixes.
 
-## Function
+### Function
 
 - Use **camelCase** naming system _(ex: `calculateDistance()`, `isEnable()`)_.
 
@@ -19,29 +21,29 @@
 
   > **Note:** An abbreviations should not be all in uppercase, _(ex: `getId()` instead of `getID()`)_.
 
-## Enum
+### Enum
 
 - Use **PascalCase** naming system with `e` prefix _(ex: `ePacketId`, `eRole`)_.
 - For **enum label**, Use **PascalCase** without any prefix _(ex: `eRole::Striker`, `eRole::LeftWing`)_.
   > **Note:** An abbreviations should not be all in uppercase, _(ex: `PacketId` instead of `PacketID`)_.
 
-## Class
+### Class
 
 - Use **PascalCase** naming system _(ex: `Ball`, `ColorClassifier`)_.
   > **Note:** An abbreviations should not be all in uppercase, _(ex: `UdpController` instead of `UDPController`)_.
 
-## Namespace
+### Namespace
 
 - Use **lower_case** naming system with only single word. _(ex: `kuro`, `eigen`)_.
   > **Note:** It is recommended to abbreviates a longer **namespace** word _(ex: `dynamixel` to `dxl`)_.
 
-## Macro
+### Macro
 
 - Use **UPPER_CASE** naming system _(ex: `LINUX`, `CUDA_ENABLE`)_.
 
-# File System
+## File System
 
-## C++ Header File
+### C++ Header File
 
 - Use **lower_case** naming system with `.hpp` extension _(ex: `device.hpp`. `robot.hpp`)_.
 - It must be placed in `include` directory according to it hierarchy _(ex: place `camera.hpp` in `include/device/camera.hpp`)_.
@@ -60,7 +62,7 @@
 > **Note:** A **C++** header file should only contain declaration of one class.
 > Although subclass is fine in this condition, if the subclass contains more methods and attributes, it is better to put it in another **C++** header file.
 
-## C++ Source File
+### C++ Source File
 
 - use **lower_case** naming system with `.cpp` extension _(ex: `device.cpp`, `robot.cpp`)_.
 - It must be placed in `source` directory.
@@ -69,12 +71,12 @@
 
 > **Note:** If the **C++** source file is not for executable _(containing `main()`)_, then the **C++** source file should only contains definition of the corresponding **C++** header file.
 
-## CMake File
+### CMake File
 
 - Use `CMakeLists.txt` for the main **CMake** file. Place it in the project root directory.
 - Use **PascalCase** naming system with `.cmake` extension for additional **CMake** file.
 
-# Comment Rule
+## Comment Rule
 
 - Use single line comment instead of block comment, even for comment with multiple line. Example:
   ``` c++
@@ -91,7 +93,7 @@
   You could do it by giving note on _"why is it doing this and not else?"_, "_what this variable exactly is?"_, etc.
 - **Only comment if it is necessary to**. If you ever find some unnecessary comment, just remove it, or adjust it with better words.
 
-# Class Rule
+## Class Rule
 
 - **Each class must have an implementation in a header file and in a source file** _(only if there is still a method that has not been defined in the header file)_. Except for subclass of another class.
 - **Always initialize an attribute in the class**. Except for non pointer class attribute.
@@ -156,7 +158,7 @@
   ```
   > **Note:** The same rule also apply for class definition in the **source file**.
 
-# Braces Rule
+## Braces Rule
 
 - **Place brace under and inline with keywords**.
   Never place initial brace on the same line and the trailing brace inline on its own line with the keyword.
@@ -195,7 +197,7 @@
   }
   ```
 
-# Indentation Rule
+## Indentation Rule
 
 - **Indentation should only use 2 spaces for each level**.
   > **Note:** The reason of this rule is larger indentation could limit code writing and 2 space is actually enough to distinguish between indentations.
@@ -226,7 +228,7 @@
   }
   ```
 
-# Parenthesis Rule
+## Parenthesis Rule
 
 - **Do not put parenthesis next to keywords**. Put a space betwen. Example:
   > **Note:** The reason of this rule is because keywords are not functions. By putting parenthesis next to keywords, keywords and function names are made to look alike.

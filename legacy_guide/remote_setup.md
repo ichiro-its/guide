@@ -1,4 +1,4 @@
-# Remote
+# Remote Setup
 
 ## Setup Remote Server
 Install openssh-server

@@ -1,4 +1,4 @@
-# Linux
+# Linux Setup
 
 ## Enable Autostart on Power Failure
 

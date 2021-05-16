@@ -1,6 +1,8 @@
-# Pre Requirements
+# ROS Setup
 
-## Configure APT Repository
+## Pre Requirements
+
+### Configure APT Repository
 
 - Add **ROS**'s sources list.
   ``` sh
@@ -12,9 +14,9 @@
   ```
 - Update the **APT** repository using `sudo apt update` command.
 
-# Setup Process
+## Setup Process
 
-## ROS Installation
+### ROS Installation
 
 - Install **ROS** Base _(recommended)_.
   ``` sh
@@ -29,12 +31,12 @@
   ~$ sudo apt install ros-melodic-desktop-full
   ```
 
-## Initialize Rosdep
+### Initialize Rosdep
 
 - Initialize rosdep using `sudo rosdep init` command.
 - Update rosdep using `rosdep update` command.
 
-## Environment Setup
+### Environment Setup
 
 - In the `~/.bashrc`, add the following text on the bottom of the file:
   ```
@@ -42,7 +44,7 @@
   ```
   > **Note:** if you are using **Zsh**, modify `~/.zshrc` instead of `~/.bashrc` and source `/opt/ros/melodic/setup.zsh` instead of `/opt/ros/melodic/setup.bash`.
 
-## Setup Dependencies for Building Packages
+### Setup Dependencies for Building Packages
 
 - Install the following dependencies for building **ROS** packages.
   ``` sh
