@@ -9,12 +9,17 @@ version = ''
 release = ''
 
 extensions = [
+    'myst_parser',
     'sphinx_rtd_theme',
 ]
 
 templates_path = ['_templates']
 
-source_suffix = '.rst'
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
+
 master_doc = 'index'
 
 language = None

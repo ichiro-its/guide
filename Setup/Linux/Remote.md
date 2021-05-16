@@ -1,10 +1,12 @@
-### Setup Remote Server
+# Remote
+
+## Setup Remote Server
 Install openssh-server
 ```sh
 $ sudo apt-get install openssh-server sshfs
 ```
 
-### Setup Samba Share
+## Setup Samba Share
 Install samba
 ```sh
 $ sudo apt-get install samba samba-common python-glade2 system-config-samba

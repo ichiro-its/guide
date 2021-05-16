@@ -1,4 +1,6 @@
-### Robot IP
+# Remote Command
+
+## Robot IP
 Add this env variables to your `~/.bashrc`
 ```sh
 export ITHAARO_NAME='ithaaro'
@@ -26,7 +28,7 @@ For wifi connection, set IP manually with
 ```sh
 $ export ROBOT_IP=<wifi_ip>
 ```
-### Remote Robot
+## Remote Robot
 Add this aliases to your `~/.bash_aliases`
 ```sh
 alias robotremote='ssh -X '$ROBOT_NAME'@'$ROBOT_IP
@@ -41,7 +43,7 @@ $ ssh-keygen -t rsa
 $ ssh-copy-id -i ~/.ssh/id_rsa $ROBOT_NAME'@'$ROBOT_IP
 ```
 
-### Mount Robot
+## Mount Robot
 Add this env variables to your `~/.bashrc`
 ```sh
 export ROBOT_MOUNT_DIR='/home/'$USER'/Share/'
@@ -56,7 +58,7 @@ alias robotcd='cd '$ROBOT_MOUNT_DIR''$ROBOT_NAME
 - Use `$ robotumount` to unmount robot directory
 - Use `$ robotcd` to change directory to robot directory
 
-### Program Command
+## Program Command
 Add this aliases to your ~/.bash_aliases
 ```sh
 alias run='./run'
@@ -69,7 +71,7 @@ alias runkill='sudo killall run'
 - Use `$ runlog` to run program with logging to `./log/<date>.log`
 - Use `$ runkill` to kill run program
 
-### Screen Command
+## Screen Command
 Add this aliases to your ~/.bash_aliases
 ```sh
 alias screenstart='screen -S run'
@@ -80,7 +82,7 @@ alias screenresume='screen -d -R run'
 - Use `ctrl + a` `ctrl + d` to detach screen
 - Use `$ exit` within screen to terminate screen
 
-### Git Command
+## Git Command
 - Use `$ git clone <repository_url>` to clone repository to local
 - Use `$ git add <file>` to track a file
 - Use `$ git add -A` to track all available files

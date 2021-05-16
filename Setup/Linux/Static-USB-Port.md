@@ -1,4 +1,4 @@
-## Assign a Static USB Port
+# Assign a Static USB Port
 
 This part is a procedure to solve the problem where the USB port of devices on a robot not properly connected with the program, especially ROS 2 program (framework). So, assign a static USB port to create a symbolic link for the USB device on robot is its solution. The devices port should be assigned one by one, to do that follow these steps:
 
