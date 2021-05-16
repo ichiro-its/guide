@@ -32,8 +32,10 @@
     ...
   ```
 
-> **Note:** Most **Zsh** theme display uncommon characters.
+  :::{Note}
+  Most **Zsh** theme display uncommon characters.
   It is recommended to use a font that supports those characters in the terminal _(ex: [hermit font](https://pcaro.es/p/hermit/))_.
+  :::
 
 ## Add Extra Plugins _(Optional)_
 

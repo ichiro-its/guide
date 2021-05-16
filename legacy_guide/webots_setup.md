@@ -26,20 +26,26 @@
   ``` sh
   ~$ sudo apt install webots
   ```
-> **Note:** **Webots** requires large amount of space _(around 2 GB)_, so the installation process will take a lot of time.
+  :::{Note}
+  **Webots** requires large amount of space _(around 2 GB)_, so the installation process will take a lot of time.
+  :::
 
 ### Post Install
 
 - Run **Webots** from application launcher or from `webots` command.
 - On the first start you will be asked to chose theme and try some example simulation.
-
-> **Note:** If there is a warning about unsupported graphics driver, make sure that graphics drivers already installed properly as in [Pre Requirements](#Pre-Requirements) section. _(Although sometimes simulation could still be run without graphics driver installed)_.
-
-> **Note:** If you are new in **Webots** it is recommended to try the tutorial first in [here](https://cyberbotics.com/doc/guide/tutorials).
+  :::{Note}
+  If there is a warning about unsupported graphics driver, make sure that graphics drivers already installed properly as in [Pre Requirements](#Pre-Requirements) section. _(Although sometimes simulation could still be run without graphics driver installed)_.
+  :::
+  :::{Note}
+  If you are new in **Webots** it is recommended to try the tutorial first in [here](https://cyberbotics.com/doc/guide/tutorials).
+  :::
 
 ### Configure Webots with Linux Environment
 
-> **Note:** For each new controller created, add a `WEBOTS_HOME` variable that contains path to the **Webots**'s controller in the controller's `Makefile` file.
+  :::{Note}
+  For each new controller created, add a `WEBOTS_HOME` variable that contains path to the **Webots**'s controller in the controller's `Makefile` file.
+  :::
 
 #### Add Webots Home Path to Environment Variable
 

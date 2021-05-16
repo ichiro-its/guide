@@ -25,8 +25,10 @@ This part is a procedure to solve the problem where the USB port of devices on a
   ```
   set the kernel (i.e `ttyUSB0`), idVendor of the device (i.e `1d6b`), and the name of the symbolic link (i.e `cm740`) which will be an assigned port name for the device (i.e CM740 device).
 
-  > **Note**: If on the list of device attribute there is nothing idVendor such as above, the static assignment can be make based on the USB kernel Id (i.e `KERNELS=="1-4:1.0"`).
-  > Then, in a file `/etc/udev/rules.d/99-usb-serial.rules`, append this following statement `KERNEL=="ttyUSB0", KERNELS=="1-4:1.0", SYMLINK+="cm740"` with the properly USB kernel of device
+  :::{Note}
+  If on the list of device attribute there is nothing idVendor such as above, the static assignment can be make based on the USB kernel Id (i.e `KERNELS=="1-4:1.0"`).
+  Then, in a file `/etc/udev/rules.d/99-usb-serial.rules`, append this following statement `KERNEL=="ttyUSB0", KERNELS=="1-4:1.0", SYMLINK+="cm740"` with the properly USB kernel of device
+  :::
 
 - Reload the udevadm rules:
   ```sh

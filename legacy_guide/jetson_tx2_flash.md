@@ -22,9 +22,12 @@
 
 - Run **NVIDIA SDK Manager** with `sdkmanager` command or dirrectly from software launcher.
 - Login with **NVIDIA Developer account**.
-
-> **Note:** There is problem with **NVIDIA SDK Manager** resolution that doesn't fit in **1366x768** or lower resolution *(the button and some bottom user interfaces are cropped in that resolution)*.
-> Use the **Tab** button to scroll down the page  *(to display the bottom of truncated user interfaces)*.
+  :::{Note}
+  There is problem with **NVIDIA SDK Manager** resolution that doesn't fit in **1366x768** or lower resolution *(the button and some bottom user interfaces are cropped in that resolution)*.
+  :::
+  :::{Note}
+  Use the **Tab** button to scroll down the page  *(to display the bottom of truncated user interfaces)*.
+  :::
 
 ## Configure Flash Options
 
@@ -55,13 +58,19 @@
 - Boot the **Jetson TX2** in recovery mode by pressing the **Reset button** _(RES)_ while holding the **Recovery Force button** _(REC)_.
   After that, hold the **Recovery Force button** _(REC)_ for about 2 seconds.
 
-> **Note:** Recovery mode is indicated by both LEDs next to the **Recovery Force button** _(REC)_ are on and the connected display is not showing anything.
+  :::{Note}
+  Recovery mode is indicated by both LEDs next to the **Recovery Force button** _(REC)_ are on and the connected display  is not showing anything.
+  :::
 
-> **Note:** Make sure the **Jetson TX2** is connected to the host with `lsusb` command _(indicated as **Nvidia Corp.**)_.
+  :::{Note}
+  Make sure the **Jetson TX2** is connected to the host with `lsusb` command _(indicated as **Nvidia Corp.**)_.
+  :::
 
 - Click flash to continue.
 
-> **Note:** In case of failure _(device not connected or haven't set to recovery mode)_, reboot the **Jetson TX2** in recovery mode. Reboot the host if failure still happens.
+  :::{Note}
+  In case of failure _(device not connected or haven't set to recovery mode)_, reboot the **Jetson TX2** in recovery mode. Reboot the host if failure still happens.
+  :::
 
 ### Ubuntu Setup
 
@@ -72,7 +81,9 @@
 - Set the hostname _(use robot name, in lowercase)_.
 - Set the password.
 
-> **Note:** It is recommended to connect to the internet in this process.
+  :::{Note}
+  It is recommended to connect to the internet in this process.
+  :::
 
 ### SDK Components Install
 

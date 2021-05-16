@@ -42,7 +42,9 @@
   ```
   source /opt/ros/melodic/setup.bash
   ```
-  > **Note:** if you are using **Zsh**, modify `~/.zshrc` instead of `~/.bashrc` and source `/opt/ros/melodic/setup.zsh` instead of `/opt/ros/melodic/setup.bash`.
+  :::{Note}
+  if you are using **Zsh**, modify `~/.zshrc` instead of `~/.bashrc` and source `/opt/ros/melodic/setup.zsh` instead of `/opt/ros/melodic/setup.bash`.
+  :::
 
 ### Setup Dependencies for Building Packages
 

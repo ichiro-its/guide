@@ -8,34 +8,46 @@
 - For **class's attribute**, use **lower_case** with `m_` prefix _(ex: `m_device`, `m_nearest_player`)_.
 
 - For **constant** Variable, use **lower_case** with `k_` prefix _(ex: `k_pi`, `k_broadcast_id`)_.
-  > **Note:** For **class's constant atribute**, choose `k_` prefix instead of `m_` prefix or both prefixes.
+  :::{Note}
+  For **class's constant atribute**, choose `k_` prefix instead of `m_` prefix or both prefixes.
+  :::
 
 - For **global** variable, use **lower_case** with `g_` prefix _(ex: `g_standard_input`, `g_config`)_.
-  > **Note:** For **global constant** variable, choose `g_` prefix instead of `k_` prefix or both prefixes.
+  :::{Note}
+  For **global constant** variable, choose `g_` prefix instead of `k_` prefix or both prefixes.
+  :::
 
 ### Function
 
 - Use **camelCase** naming system _(ex: `calculateDistance()`, `isEnable()`)_.
-
-  > **Note:** It is recommended to use a **function** name that has at least 2 words to prevent conflict with a **variable** name.
-
-  > **Note:** An abbreviations should not be all in uppercase, _(ex: `getId()` instead of `getID()`)_.
+  :::{Note}
+  It is recommended to use a **function** name that has at least 2 words to prevent conflict with a **variable** name.
+  :::
+  :::{Note}
+  An abbreviations should not be all in uppercase, _(ex: `getId()` instead of `getID()`)_.
+  :::
 
 ### Enum
 
 - Use **PascalCase** naming system with `e` prefix _(ex: `ePacketId`, `eRole`)_.
 - For **enum label**, Use **PascalCase** without any prefix _(ex: `eRole::Striker`, `eRole::LeftWing`)_.
-  > **Note:** An abbreviations should not be all in uppercase, _(ex: `PacketId` instead of `PacketID`)_.
+  :::{Note}
+  An abbreviations should not be all in uppercase, _(ex: `PacketId` instead of `PacketID`)_.
+  :::
 
 ### Class
 
 - Use **PascalCase** naming system _(ex: `Ball`, `ColorClassifier`)_.
-  > **Note:** An abbreviations should not be all in uppercase, _(ex: `UdpController` instead of `UDPController`)_.
+  :::{Note}
+  An abbreviations should not be all in uppercase, _(ex: `UdpController` instead of `UDPController`)_.
+  :::
 
 ### Namespace
 
 - Use **lower_case** naming system with only single word. _(ex: `kuro`, `eigen`)_.
-  > **Note:** It is recommended to abbreviates a longer **namespace** word _(ex: `dynamixel` to `dxl`)_.
+  :::{Note}
+  It is recommended to abbreviates a longer **namespace** word _(ex: `dynamixel` to `dxl`)_.
+  :::
 
 ### Macro
 
@@ -59,8 +71,10 @@
   #endif
   ```
 
-> **Note:** A **C++** header file should only contain declaration of one class.
+:::{Note}
+A **C++** header file should only contain declaration of one class.
 > Although subclass is fine in this condition, if the subclass contains more methods and attributes, it is better to put it in another **C++** header file.
+:::
 
 ### C++ Source File
 
@@ -69,7 +83,9 @@
 - Should only contains definition of function/method.
 - May contains macro.
 
-> **Note:** If the **C++** source file is not for executable _(containing `main()`)_, then the **C++** source file should only contains definition of the corresponding **C++** header file.
+:::{Note}
+If the **C++** source file is not for executable _(containing `main()`)_, then the **C++** source file should only contains definition of the corresponding **C++** header file.
+:::
 
 ### CMake File
 
@@ -115,10 +131,14 @@
     int m_id;
   }
   ```
-  > **Note:** The same rule also apply for class definition in the **source file**.
+  :::{Note}
+  The same rule also apply for class definition in the **source file**.
+  :::
 
 - **Class's member** must be ordered by **constructor**, **destructor**, **static method**, **method**, **enum**,  **constant attribute**, **static attribute**, then **attribute**. Example:
-  > **Note:** A **class** calls its member variable as an **attribute** and its member function as a **method**.
+  :::{Note}
+  A **class** calls its member variable as an **attribute** and its member function as a **method**.
+  :::
   ``` c++
   class Foo
   {
@@ -156,13 +176,16 @@
     int m_b_value = 0;
   }
   ```
-  > **Note:** The same rule also apply for class definition in the **source file**.
+  :::{Note}
+  The same rule also apply for class definition in the **source file**.
+  :::
 
 ## Braces Rule
 
 - **Place brace under and inline with keywords**.
   Never place initial brace on the same line and the trailing brace inline on its own line with the keyword.
-  > **Note:** The reason of this rule is with placing the initial and the trailing brace in the same indentation could make it easy to know where the block of code start and end. Example:
+  :::{Note}
+  The reason of this rule is with placing the initial and the trailing brace in the same indentation could make it easy to know where the block of code start and end. Example:
   ``` c++
   // do
   if (condition)
@@ -175,8 +198,11 @@
     // do something
   }
   ```
+  :::
 - **Always use block of code**. Except for single statement, place it under the condition with indentation. Example:
-  > **Note:** This rule does not apply for else with single statement if there are braces above it.
+  :::{Note}
+  This rule does not apply for else with single statement if there are braces above it.
+  :::
   ``` c++
   if (condition)
     // single statement
@@ -200,9 +226,13 @@
 ## Indentation Rule
 
 - **Indentation should only use 2 spaces for each level**.
-  > **Note:** The reason of this rule is larger indentation could limit code writing and 2 space is actually enough to distinguish between indentations.
+  :::{Note}
+  The reason of this rule is larger indentation could limit code writing and 2 space is actually enough to distinguish between indentations.
+  :::
 - **The label of switch statement should not be indented**. Example:
-  > **Note:** The reason of this rule is because switch actually should work just as multiple if else. Just think of each case as an if statement. that is why identation is not needed.
+  :::{Note}
+  The reason of this rule is because switch actually should work just as multiple if else. Just think of each case as an if statement. that is why identation is not needed.
+  :::
   ``` c++
   switch (a)
   {
@@ -231,7 +261,9 @@
 ## Parenthesis Rule
 
 - **Do not put parenthesis next to keywords**. Put a space betwen. Example:
-  > **Note:** The reason of this rule is because keywords are not functions. By putting parenthesis next to keywords, keywords and function names are made to look alike.
+  :::{Note}
+  The reason of this rule is because keywords are not functions. By putting parenthesis next to keywords, keywords and function names are made to look alike.
+  :::
   ``` c++
   // do
   if (condition)
