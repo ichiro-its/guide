@@ -10,7 +10,7 @@ Use :ref:`APT <apt-guide>` to install TigerVNC Scraping Server.
 
 .. code-block:: bash
 
-  $ sudo apt install tigervnc-scraping-server
+   $ sudo apt install tigervnc-scraping-server
 
 Generate VNC Password Configuration
 -----------------------------------
@@ -19,12 +19,12 @@ Run the following command to generate a VNC password configuration on ``~/.vnc/p
 
 .. code-block:: bash
 
-  $ vncpasswd
+   $ vncpasswd
 
 .. note::
 
-  After inputting the password, the program will ask to enter a view-only password.
-  It's recommended to ignore this and use the same password for the view-only mode.
+   After inputting the password, the program will ask to enter a view-only password.
+   It's recommended to ignore this and use the same password for the view-only mode.
 
 Start TigerVNC Scraping Server
 ------------------------------
@@ -34,13 +34,13 @@ After that, the server could be accessed using VNC client on port ``5900`` (the 
 
 .. code-block:: bash
 
-  $ x0vncserver -passwordfile ~/.vnc/passwd
+   $ x0vncserver -passwordfile ~/.vnc/passwd
 
 .. note::
 
-  The password file option should be provided.
-  Else, some clients may refuse to connect to the server.
+   The password file option should be provided.
+   Else, some clients may refuse to connect to the server.
 
 .. seealso::
 
-  `X0vncserver manual <https://tigervnc.org/doc/x0vncserver.html>`_ on the official TigerVNC documentation.
+   `X0vncserver manual <https://tigervnc.org/doc/x0vncserver.html>`_ on the official TigerVNC documentation.

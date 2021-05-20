@@ -6,7 +6,7 @@ Create Documentation Using Sphinx
 This section will explain a guide on creating good documentation using `Sphinx <https://www.sphinx-doc.org/en/master/>`_.
 
 .. toctree::
-  :maxdepth: 2
+   :maxdepth: 1
 
-  setup-sphinx.rst
-  build-documentation.rst
+   sphinx-guide/setup-sphinx.rst
+   sphinx-guide/build-documentation.rst

@@ -5,7 +5,7 @@ This section will explain a guide on building documentation from a :ref:`Sphinx 
 
 .. seealso ::
 
-  `Getting started on Sphinx <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ on the official Sphinx documentation.
+   `Getting started on Sphinx <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ on the official Sphinx documentation.
 
 Build HTML Page From a Sphinx Project
 -------------------------------------
@@ -15,4 +15,4 @@ For example, the following command will build HTML page from current directory t
 
 .. code-block:: bash
 
-  $ sphinx-build -b html . _build
+   $ sphinx-build -b html . _build

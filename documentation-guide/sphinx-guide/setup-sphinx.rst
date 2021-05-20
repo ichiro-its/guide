@@ -5,18 +5,18 @@ This section will explain some of the options for installing :ref:`Sphinx <sphin
 
 .. seealso ::
 
-  `Sphinx installation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_ on the official Sphinx documentation.
+   `Sphinx installation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_ on the official Sphinx documentation.
 
 Install Sphinx Using APT
 ------------------------
 
 .. code-block:: bash
 
-  $ sudo apt install python-sphinx
+   $ sudo apt install python-sphinx
 
 (Alternative) Install Sphinx Using Pip
 --------------------------------------
 
 .. code-block:: bash
 
-  $ pip install -U sphinx
+   $ pip install -U sphinx

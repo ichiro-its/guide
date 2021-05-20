@@ -1,11 +1,39 @@
 Welcome to ICHIRO ITS Guide!
 ============================
 
-.. toctree::
-   :maxdepth: 2
+This website contains collection of guides that commonly used by `ICHIRO ITS <https://ichiro-its.org/>`_ humanoid robot soccer team.
 
-   documentation-guide/index.rst
-   debian-package-guide/index.rst
-   remote-guide/index.rst
-   python-guide/index.rst
-   legacy_guide/index.rst
+.. toctree::
+   :caption: Documentation Guide
+   :maxdepth: 1
+   :glob:
+
+   documentation-guide/*
+
+.. toctree::
+   :caption: Debian Package Guide
+   :maxdepth: 1
+   :glob:
+
+   debian-package-guide/*
+
+.. toctree::
+   :caption: Remote Guide
+   :maxdepth: 1
+   :glob:
+
+   remote-guide/*
+
+.. toctree::
+   :caption: Python Guide
+   :maxdepth: 1
+   :glob:
+
+   python-guide/*
+
+.. toctree::
+   :caption: Legacy Guide
+   :maxdepth: 1
+   :glob:
+
+   legacy_guide/*
