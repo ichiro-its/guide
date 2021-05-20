@@ -5,7 +5,7 @@ This section will explain some of the options for installing :ref:`Sphinx <sphin
 
 .. seealso ::
 
-  `Sphinx official installation guide <https://www.sphinx-doc.org/en/master/usage/installation.html>`_.
+  `Sphinx installation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_ on the official Sphinx documentation.
 
 Install Sphinx Using APT
 ------------------------

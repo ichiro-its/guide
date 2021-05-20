@@ -6,4 +6,4 @@ Documentation Guide
 .. toctree::
   :maxdepth: 2
 
-  sphinx_guide/index.rst
+  sphinx-guide/index.rst
