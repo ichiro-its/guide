@@ -6,5 +6,6 @@ Welcome to ICHIRO ITS Guide!
 
    documentation-guide/index.rst
    debian-package-guide/index.rst
+   remote-guide/index.rst
    python-guide/index.rst
    legacy_guide/index.rst
