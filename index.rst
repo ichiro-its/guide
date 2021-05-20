@@ -2,8 +2,6 @@ Welcome to ICHIRO ITS Guide!
 ============================
 
 .. toctree::
-   :glob:
-   :maxdepth: 1
-   :caption: Legacy Guide
+   :maxdepth: 2
 
-   legacy_guide/*
+   legacy_guide/index.rst
