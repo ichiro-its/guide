@@ -1,12 +1,14 @@
-# Installation Using APT
+# Webots Setup
 
-## Pre Requirements
+## Installation Using APT
 
-### Verifying Graphics Driver Installation
+### Pre Requirements
+
+#### Verifying Graphics Driver Installation
 
 - Make sure that **Nvidia** driver was already installed in the PC, for more information please refers [here](https://cyberbotics.com/doc/guide/verifying-your-graphics-driver-installation).
 
-### Configure APT Repository
+#### Configure APT Repository
 
 - Add **Cyber Robotics**'s **APT** keys.
   ``` sh
@@ -18,28 +20,34 @@
   ```
 - Update the **APT** repository using `sudo apt update` command.
 
-## Installation
+### Installation
 
 - Install as usual using `apt install` command.
   ``` sh
   ~$ sudo apt install webots
   ```
-> **Note:** **Webots** requires large amount of space _(around 2 GB)_, so the installation process will take a lot of time.
+  :::{Note}
+  **Webots** requires large amount of space _(around 2 GB)_, so the installation process will take a lot of time.
+  :::
 
-## Post Install
+### Post Install
 
 - Run **Webots** from application launcher or from `webots` command.
 - On the first start you will be asked to chose theme and try some example simulation.
+  :::{Note}
+  If there is a warning about unsupported graphics driver, make sure that graphics drivers already installed properly as in [Pre Requirements](#Pre-Requirements) section. _(Although sometimes simulation could still be run without graphics driver installed)_.
+  :::
+  :::{Note}
+  If you are new in **Webots** it is recommended to try the tutorial first in [here](https://cyberbotics.com/doc/guide/tutorials).
+  :::
 
-> **Note:** If there is a warning about unsupported graphics driver, make sure that graphics drivers already installed properly as in [Pre Requirements](#Pre-Requirements) section. _(Although sometimes simulation could still be run without graphics driver installed)_.
+### Configure Webots with Linux Environment
 
-> **Note:** If you are new in **Webots** it is recommended to try the tutorial first in [here](https://cyberbotics.com/doc/guide/tutorials).
+  :::{Note}
+  For each new controller created, add a `WEBOTS_HOME` variable that contains path to the **Webots**'s controller in the controller's `Makefile` file.
+  :::
 
-## Configure Webots with Linux Environment
-
-> **Note:** For each new controller created, add a `WEBOTS_HOME` variable that contains path to the **Webots**'s controller in the controller's `Makefile` file.
-
-### Add Webots Home Path to Environment Variable
+#### Add Webots Home Path to Environment Variable
 
 - In your `~/.bashrc` file _(or `~/.zshrc` if using **Zsh**)_, add the following text in the bottom of the file to export WEBOTS_HOME environment variable that contains a path to **Webots** directory _(usually it is `/usr/local/webots`)_.
   ``` sh
@@ -47,7 +55,7 @@
   ```
 - Reload the environment with `source` command.
 
-### Configure Webots Library Path
+#### Configure Webots Library Path
 - Create a symbolic link from some of **Webots**'s library to the default library path.
   ``` sh
   ~$ sudo ln -s $WEBOTS_HOME/lib/controller/libController.so /usr/local/lib/libWebotsController.so
@@ -55,15 +63,15 @@
   ~$ sudo ln -s $WEBOTS_HOME/lib/webots/libpng12.so.0 /usr/local/lib/libpng12.so.0
   ```
 
-### Configure Webots Include Path
+#### Configure Webots Include Path
 - Create a symbolic link from **Webots**'s include path to the default include path.
   ``` sh
   ~$ sudo ln -s $WEBOTS_HOME/include/controller/cpp/webots /usr/local/include/webots
   ```
 
-# Installation from Source
+## Installation from Source
 
-## Clone the Github Repository
+### Clone the Github Repository
 - Create the development directory in home directory and clone the repository.
     ```sh
     ~$ git config --global credential.helper store
@@ -74,7 +82,7 @@
     ~$ cd webots
     ```
 
-## Install Prerequisites Packages
+### Install Prerequisites Packages
 - Install the **Webots** dependencies.
     ```sh
     ~$ sudo scripts/install/linux_compilation_dependencies.sh
@@ -88,14 +96,14 @@
     ~$ sudo cp stb/stb_image_write.h /usr/local/include/
     ```
 
-## Setup Your Bash Profile
+### Setup Your Bash Profile
 - Append the content of `scripts/install/bashrc.linux` to `~/.bashrc`.
     ```sh
     ~$ cat scripts/install/bashrc.linux >> ~/.bashrc
     ~$ source ~/.bashrc
     ```
 
-## Build Webots
+### Build Webots
 - Compile **Webots**.
     ```sh
     ~$ make

@@ -1,4 +1,4 @@
-# Build Process
+# YOLO Setup
 
 ## Clone YOLO Repository
 

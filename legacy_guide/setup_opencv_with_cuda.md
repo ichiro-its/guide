@@ -1,4 +1,6 @@
-# Pre Requirements
+# Setup OpenCV With CUDA
+
+## Pre Requirements
 
 - If **OpenCV** has been installed previously, remove it using `sudo apt purge libopencv*`.
 - Install some dependancy as follow:
@@ -12,15 +14,15 @@
       pkg-config qt5-default zlib1g-dev
   ```
 
-# Build Process
+## Build Process
 
-## Clone OpenCV and OpenCV_Contrib Repository
+### Clone OpenCV and OpenCV_Contrib Repository
 
 - Clone this repository `https://github.com/opencv/opencv.git`.
 - Clone this repository `https://github.com/opencv/opencv_contrib`.
 - Change the branch to the most recent **4.2** version _(the last version used was **4.2.0**)_.
 
-## Build OpenCV
+### Build OpenCV
 
 - Create `build` directory inside **OpenCV** repository and `cd` to that directory.
 - Create Makefiles with the following options:
@@ -47,40 +49,44 @@
   ```
 - Build **OpenCV** with `make -j$(nproc)` command.
 
-> **Note:** If there is a problem with **OpenGL** support, fix it with creating a new patch file which contain the following text:
-> ```
-> diff --git a/cuda_gl_interop.h b/cuda_gl_interop.h
-> index 0f4aa17..e8c538c 100644
-> --- a/cuda_gl_interop.h
-> +++ b/cuda_gl_interop.h
-> @@ -59,13 +59,13 @@
->
->  #else /* __APPLE__ */
->
-> -#if defined(__arm__) || defined(__aarch64__)
-> -#ifndef GL_VERSION
-> -#error Please include the appropriate gl headers before including cuda_gl_interop.h
-> -#endif
-> -#else
-> +//#if defined(__arm__) || defined(__aarch64__)
-> +//#ifndef GL_VERSION
-> +//#error Please include the appropriate gl headers before including cuda_gl_interop.h
-> +//#endif
-> +//#else
-> #include <GL/gl.h>
-> -#endif
-> +//#endif
->
->  #endif /* __APPLE__ */
-> ```
-> And then patch `cuda_gl_interop.h` header inside **CUDA**'s header directory using `sudo patch -N <header_file> <patch_file>` command.
+  :::{Note}
+  If there is a problem with **OpenGL** support, fix it with creating a new patch file which contain the following text:
+  ```
+  diff --git a/cuda_gl_interop.h b/cuda_gl_interop.h
+  index 0f4aa17..e8c538c 100644
+  --- a/cuda_gl_interop.h
+  +++ b/cuda_gl_interop.h
+  @@ -59,13 +59,13 @@
+  >
+   #else /* __APPLE__ */
+  >
+  -#if defined(__arm__) || defined(__aarch64__)
+  -#ifndef GL_VERSION
+  -#error Please include the appropriate gl headers before including cuda_gl_interop.h
+  -#endif
+  -#else
+  +//#if defined(__arm__) || defined(__aarch64__)
+  +//#ifndef GL_VERSION
+  +//#error Please include the appropriate gl headers before including cuda_gl_interop.h
+  +//#endif
+  +//#else
+  #include <GL/gl.h>
+  -#endif
+  +//#endif
+  >
+   #endif /* __APPLE__ */
+  ```
+  And then patch `cuda_gl_interop.h` header inside **CUDA**'s header directory using `sudo patch -N <header_file> <patch_file>` command.
+  :::
 
-> **Note:** If there is a problem with **Eigen** header, make sure that it has been installed.
-> If it has been installed, check the include directory of `Eigen/`, **OpenCV** expects that it is placed in the root. If it is placed in another directory _(example in `eigen3/Eigen/`)_, create symbolic link of that place to `Eigen/` using `ln -s <source_directory> <target_directory>` command.
+  :::{Note}
+  If there is a problem with **Eigen** header, make sure that it has been installed.
+  If it has been installed, check the include directory of `Eigen/`, **OpenCV** expects that it is placed in the root. If it is placed in another directory _(example in `eigen3/Eigen/`)_, create symbolic link of that place to `Eigen/` using `ln -s <source_directory> <target_directory>` command.
+  :::
 
-# Post Install
+## Post Install
 
-## Configure OpenCV Library Path
+### Configure OpenCV Library Path
 
 - Create new file `opencv.conf` inside `/etc/ld.so.conf.d/` and fill it with the following text:
   ```
@@ -88,7 +94,7 @@
   ```
 - Reload library path using `sudo ldconfig` command.
 
-## Build OpenCV-python
+### Build OpenCV-python
 
 - Install **OpenCV-python** using `pip`
   ``` sh

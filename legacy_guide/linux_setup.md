@@ -1,13 +1,15 @@
-### Enable Autostart on Power Failure
+# Linux Setup
+
+## Enable Autostart on Power Failure
 
 - Enter Intel Visual BIOS (press `f2` when booting)
 - Choose `Advanced` -> `Power`
 - On `After Power Failure`, select `Power On`
 
-### Linux Installation
+## Linux Installation
 Use Ubuntu [18.04.3 Desktop (64-bit)](http://old-releases.ubuntu.com/releases/bionic/ubuntu-18.04-desktop-amd64.iso)
 
-### Downgrade Linux Kernel
+## Downgrade Linux Kernel
 
 Install Ukuu
 ```sh
@@ -23,14 +25,14 @@ $ sudo ukuu --install v4.2.8-ckt13
 $ reboot now
 ```
 
-### Update date
+## Update date
 
 Update date from google.com (using internet)
 ```sh
 $ sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 ```
 
-### Fix Root Permission
+## Fix Root Permission
 Add user to appropriate groups (dialout for serial, video for camera)
 ```sh
 $ sudo usermod -aG dialout $USER
@@ -41,7 +43,7 @@ Increase real-time scheduling priority (for thread)
 $ sudo bash -c 'echo "@"'$USER'" - rtprio 99" > /etc/security/limits.d/'$USER'-rtprio.conf'
 ```
 
-### Setup DHCP Server
+## Setup DHCP Server
 Install DHCP Server
 ```sh
 $ sudo apt-get update
@@ -83,7 +85,7 @@ $ sudo ufw reload
 $ sudo service networking restart
 ```
 
-### Library Setup
+## Library Setup
 Install ncurse (terminal interface library)
 ```sh
 $ sudo apt-get install libncurses5-dev
@@ -111,7 +113,7 @@ $ make -j4
 $ sudo make install
 ```
 
-### Additional Setup
+## Additional Setup
 Install vim (text editor)
 ```sh
 $ sudo apt-get install vim

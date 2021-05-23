@@ -1,4 +1,6 @@
-# Configure APT Repository
+# ROS 2 Setup
+
+## Configure APT Repository
 
 - Add **ROS2**'s **APT** key.
   ```sh
@@ -13,23 +15,23 @@
   ~$ sudo apt update
   ```
 
-# ROS2 Installation
+## ROS2 Installation
 
 - Install either **ROS2** Base _(minimal package)_ using `apt` command.
   ```sh
   ~$ sudo apt install ros-dashing-ros-base
   ```
 
-# Additional Installation
+## Additional Installation
 
-## Colcon Installation
+### Colcon Installation
 
 - install **Colcon** to build **ROS2** packages using `apt` command.
   ```sh
   ~$ sudo apt install python3-colcon-common-extensions
   ```
 
-## RMW Cyclone DDS Installation
+### RMW Cyclone DDS Installation
 
 - Install **RMW Cyclone DDS** using `apt` command.
   ```sh
