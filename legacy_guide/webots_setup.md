@@ -72,13 +72,9 @@
 ## Installation from Source
 
 ### Clone the Github Repository
-- Create the development directory in home directory and clone the repository.
+- Clone the repository.
     ```sh
-    ~$ git config --global credential.helper store
-    ~$ git config --global user.email "you@example.com"
-    ~$ git config --global user.name "Your Name"
-    ~$ git config --global push.default simple
-    ~$ git clone --recurse-submodules -j8 https://github.com/cyberbotics/webots.git
+    ~$ git clone --recurse-submodules --branch release https://github.com/RoboCup-Humanoid-TC/webots
     ~$ cd webots
     ```
 
@@ -90,17 +86,7 @@
     ```
 - Install the other required packages.
     ```sh
-    ~$ sudo apt install libfreetype6-dev libglm-dev libusb-dev libssl-dev libzip-dev
-    ~$ git clone https://github.com/nothings/stb.git
-    ~$ sudo cp stb/stb_image.h /usr/local/include/
-    ~$ sudo cp stb/stb_image_write.h /usr/local/include/
-    ```
-
-### Setup Your Bash Profile
-- Append the content of `scripts/install/bashrc.linux` to `~/.bashrc`.
-    ```sh
-    ~$ cat scripts/install/bashrc.linux >> ~/.bashrc
-    ~$ source ~/.bashrc
+    ~$ sudo apt install python-is-python3
     ```
 
 ### Build Webots
@@ -108,3 +94,39 @@
     ```sh
     ~$ make
     ```
+
+### Setup Your Bash Profile
+- Append the string in `WEBOTS_HOME=/path/to/webots` to `~/.bashrc`.
+    ```sh
+    ~$ echo WEBOTS_HOME=/path/to/webots >> ~/.bashrc
+    ```
+
+### Post Install
+- Build the latest version of the official RoboCup Humanoid TC fork of the [GameController](https://github.com/RoboCup-Humanoid-TC/GameController).
+  ```sh
+  ~$ sudo apt-get install ant
+  ~$ git clone https://github.com/RoboCup-Humanoid-TC/GameController
+  ~$ cd GameController
+  ~$ ant
+  ```
+- Install Python dependencies.
+  ```sh
+  ~$ cd webots/projects/samples/contests/robocup/controllers/referee
+  ~$ pip3 install -r requirements.txt
+  ```
+- Build the controllers.
+  ```sh
+  ~$ apt-get install protobuf-compiler libprotobuf-dev libjpeg9-dev
+  ~$ cd webots/projects/samples/contests/robocup
+  ~$ make
+
+  ```
+
+### Run the Demo
+- Open the [robocup.wbt](https://github.com/RoboCup-Humanoid-TC/webots/blob/release/projects/samples/contests/robocup/worlds/robocup.wbt) world file in Webots and run it until you see the GameController window showing up.
+  ```sh
+   export GAME_CONTROLLER_HOME=/path/to/GameController JAVA_HOME=/usr
+   ./webots ./projects/samples/contests/robocup/worlds/robocup.wbt
+   ```
+   You have to pass the environment variables `GAME_CONTROLLER_HOME` which points to the `GameController` folder and `JAVA_HOME` which points to your Java installation (which might be under `/usr`).
+- You can manually move the robots and the ball using the mouse (<kbd>Shift</kbd>-right-click-and-drag).
