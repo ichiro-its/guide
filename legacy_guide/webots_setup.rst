@@ -72,7 +72,7 @@ Configure Webots with Linux Environment
 Add Webots Home Path to Environment Variable
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  In your ``~/.bashrc`` file *(or ``~/.zshrc`` if using **Zsh**)*, add the following text in the bottom of the file to export WEBOTS\_HOME environment variable that contains a path to **Webots** directory *(usually it is ``/usr/local/webots``)*.
+-  In your ``~/.bashrc`` file (or ``~/.zshrc`` if using **Zsh**), add the following text in the bottom of the file to export WEBOTS\_HOME environment variable that contains a path to **Webots** directory (usually it is ``/usr/local/webots``).
    
    .. code-block:: bash
    
@@ -138,9 +138,9 @@ Build Webots
 
 -  Compile **Webots**. 
 
-   .. code-block::
-     
-      bash~$ make
+   .. code-block:: bash
+   
+      ~$ make
    ..
 
 Setup Your Bash Profile
