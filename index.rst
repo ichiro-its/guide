@@ -6,30 +6,27 @@ This website contains collection of guides that commonly used by `ICHIRO ITS <ht
 .. toctree::
    :caption: Documentation Guide
    :maxdepth: 1
-   :glob:
 
-   documentation-guide/*
+   documentation-guide/sphinx-guide.rst
 
 .. toctree::
    :caption: Debian Package Guide
    :maxdepth: 1
-   :glob:
 
-   debian-package-guide/*
+   debian-package-guide/apt-guide.rst
 
 .. toctree::
    :caption: Remote Guide
    :maxdepth: 1
-   :glob:
 
-   remote-guide/*
+   remote-guide/vnc-guide.rst
 
 .. toctree::
    :caption: Python Guide
    :maxdepth: 1
-   :glob:
 
-   python-guide/*
+   python-guide/python-guide.rst
+   python-guide/pip-guide.rst
 
 .. toctree::
    :caption: Legacy Guide

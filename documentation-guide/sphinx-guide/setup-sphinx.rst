@@ -12,9 +12,9 @@ Install Sphinx Using APT
 
 .. code-block:: bash
 
-   $ sudo apt install python-sphinx
+   $ sudo apt install python3-sphinx
 
-(Alternative) Install Sphinx Using Pip
+(Alternative) Install Sphinx Using pip
 --------------------------------------
 
 .. code-block:: bash
