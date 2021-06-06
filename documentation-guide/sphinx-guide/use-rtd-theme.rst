@@ -14,7 +14,7 @@ Read the Docs Sphinx theme is available on :ref:`pip <pip-guide>` as :code:`sphi
 
 .. code-block:: bash
 
-   $ sudo apt install sphinx-rtd-theme
+   $ pip install sphinx-rtd-theme
 
 Configure Theme in a Sphinx Project
 -----------------------------------
@@ -26,8 +26,8 @@ Modify :code:`conf.py` of the project by adding :code:`sphinx-rtd-theme` in the 
    import sphinx_rtd_theme
 
    extensions = [
-      ...
-      "sphinx_rtd_theme",
+     ...
+     "sphinx_rtd_theme",
    ]
 
    html_theme = "sphinx_rtd_theme"
