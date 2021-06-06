@@ -13,3 +13,4 @@ This section will explain a guide on creating good documentation using Sphinx.
 
    sphinx-guide/setup-sphinx.rst
    sphinx-guide/build-documentation.rst
+   sphinx-guide/use-rtd-theme.rst
