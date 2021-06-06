@@ -1,12 +1,16 @@
-Start TigerVNC Server Using Existing Display
-============================================
+Start VNC Server Using Existing Display
+=======================================
 
-This section will explain a guide on starting a VNC server to remote desktop an existing display using `TigerVNC <https://tigervnc.org/>`_ scraping server.
+This section will explain a guide on starting a :ref:`VNC <vnc-guide>` server to remote desktop an existing display using `TigerVNC <https://tigervnc.org/>`_ scraping server (:code:`x0vncserver`).
+
+.. seealso::
+
+   `x0vncserver manual <https://tigervnc.org/doc/x0vncserver.html>`_ on the official TigerVNC documentation.
 
 Setup TigerVNC Scraping Server
 ------------------------------
 
-Use :ref:`APT <apt-guide>` to install TigerVNC Scraping Server.
+TigerVNC scraping server is available on :ref:`APT <apt-guide>` as :code:`tigervnc-scraping-server` package.
 
 .. code-block:: bash
 
@@ -15,7 +19,7 @@ Use :ref:`APT <apt-guide>` to install TigerVNC Scraping Server.
 Generate VNC Password Configuration
 -----------------------------------
 
-Run the following command to generate a VNC password configuration on ``~/.vnc/passwd``.
+Run the following command to generate a VNC password configuration on :code:`~/.vnc/passwd`.
 
 .. code-block:: bash
 
@@ -40,7 +44,3 @@ After that, the server could be accessed using VNC client on port ``5900`` (the 
 
    The password file option should be provided.
    Else, some clients may refuse to connect to the server.
-
-.. seealso::
-
-   `X0vncserver manual <https://tigervnc.org/doc/x0vncserver.html>`_ on the official TigerVNC documentation.
