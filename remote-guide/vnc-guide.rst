@@ -12,3 +12,4 @@ This section will explain a guide on how to remote desktop a machine using VNC.
    :maxdepth: 1
 
    vnc-guide/start-vnc-scraping-server.rst
+   vnc-guide/start-vnc-standalone-server.rst

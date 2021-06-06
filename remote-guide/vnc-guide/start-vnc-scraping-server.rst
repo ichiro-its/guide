@@ -34,7 +34,7 @@ Start TigerVNC Scraping Server
 ------------------------------
 
 Run the following command to start TigerVNC scraping server using the existing display.
-After that, the server could be accessed using VNC client on port ``5900`` (the default port).
+After that, the server could be accessed using VNC client on port :code:`5900` (the default port).
 
 .. code-block:: bash
 
