@@ -11,3 +11,4 @@ This section will explain a guide on generating good C++ documentations using Do
     :maxdepth: 1
  
     doxygen-guide/setup-doxygen.rst
+    doxygen-guide/build-documentation.rst

@@ -1,7 +1,7 @@
 Build Documentations Using Sphinx
 =================================
 
-This section will explain a guide on building documentation from a :ref:`Sphinx <sphinx-guide>` project.
+This section will explain a guide on building documentations from a :ref:`Sphinx <sphinx-guide>` project.
 
 .. seealso::
 
