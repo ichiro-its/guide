@@ -24,4 +24,4 @@ Alternatively, Sphinx is available on APT as :code:`python3-sphinx` package.
 
 .. code-block:: bash
 
-   $ sudo apt install python3-Sphinx
+   $ apt install python3-Sphinx

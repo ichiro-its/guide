@@ -10,7 +10,7 @@ TigerVNC standalone server is available on :ref:`APT <apt-guide>` as :code:`tige
 
 .. code-block:: bash
 
-   $ sudo apt install tigervnc-standalone-server
+   $ apt install tigervnc-standalone-server
 
 Generate VNC Password Configuration
 -----------------------------------
