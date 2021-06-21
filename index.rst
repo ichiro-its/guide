@@ -23,6 +23,12 @@ This website contains collection of guides that commonly used by `ICHIRO ITS <ht
    remote-guide/vnc-guide.rst
 
 .. toctree::
+   :caption: C++ Guide
+   :maxdepth: 1
+
+   cpp-guide/cpp-guide.rst
+
+.. toctree::
    :caption: Python Guide
    :maxdepth: 1
 
