@@ -16,7 +16,6 @@ Sphinx is available on pip as :code:`sphinx` package.
 
    $ pip install -U sphinx
    
-
 (Alternative) Install Sphinx Using APT
 --------------------------------------
 
