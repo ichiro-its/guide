@@ -1,12 +1,12 @@
 .. _sphinx-guide:
 
-Create Documentations Using Sphinx
-==================================
+Generate Documentations Using Sphinx
+====================================
 
 `Sphinx <https://www.sphinx-doc.org/en/master/>`_ is a documentation generator written and used by the Python community.
 It is written in :ref:`Python <python-guide>`, and also used in other environments.
 
-This section will explain a guide on creating good documentation using Sphinx.
+This section will explain a guide on generating good documentations using Sphinx.
 
 .. toctree::
    :maxdepth: 1
