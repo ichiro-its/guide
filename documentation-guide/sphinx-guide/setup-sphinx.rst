@@ -1,26 +1,32 @@
-Setup Sphinx
-============
+Setup a Sphinx Project
+======================
 
-This section will explain some of the options for installing :ref:`Sphinx <sphinx-guide>` using :ref:`pip <pip-guide>` and :ref:`APT <apt-guide>`.
+This section will explain a guide on setting up a :ref:`Sphinx <sphinx-guide>` project.
 
 .. seealso::
 
-   `Sphinx installation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_ on the official Sphinx documentation.
+   `Sphinx installation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_ and `Getting started on Sphinx <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ on the official Sphinx documentation.
 
-Install Sphinx Using pip
-------------------------
+Install Sphinx
+--------------
 
-Sphinx is available on pip as :code:`sphinx` package.
+Sphinx is available on :ref:`pip <pip-guide>` as :code:`sphinx` package.
 
 .. code-block:: bash
 
    $ pip install -U sphinx
-   
-(Alternative) Install Sphinx Using APT
---------------------------------------
 
-Alternatively, Sphinx is available on APT as :code:`python3-sphinx` package.
+Alternatively, Sphinx is also available on :ref:`APT <apt-guide>` as :code:`python3-sphinx` package.
 
 .. code-block:: bash
 
    $ apt install python3-Sphinx
+
+Generate a Sphinx Project
+-------------------------
+
+Sphinx project could be generated using :code:`sphinx-quickstart` command.
+
+.. code-block:: bash
+
+   $ sphinx-quickstart
