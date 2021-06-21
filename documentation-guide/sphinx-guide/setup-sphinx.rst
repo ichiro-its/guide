@@ -5,10 +5,10 @@ This section will explain a guide on setting up a :ref:`Sphinx <sphinx-guide>` p
 
 .. seealso::
 
-   `Sphinx installation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_ and `Getting started on Sphinx <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ on the official Sphinx documentation.
+   `Sphinx installation <https://www.sphinx-doc.org/en/master/usage/installation.html>`_ and `getting started on Sphinx <https://www.sphinx-doc.org/en/master/usage/quickstart.html>`_ on the official Sphinx documentation.
 
-Install Sphinx
---------------
+Sphinx Installation
+-------------------
 
 Sphinx is available on :ref:`pip <pip-guide>` as :code:`sphinx` package.
 
@@ -22,10 +22,10 @@ Alternatively, Sphinx is also available on :ref:`APT <apt-guide>` as :code:`pyth
 
    $ apt install python3-Sphinx
 
-Generate a Sphinx Project
--------------------------
+Create a Sphinx Project
+-----------------------
 
-Sphinx project could be generated using :code:`sphinx-quickstart` command.
+Use :code:`sphinx-quickstart` command to create a configuration file (:code:`conf.py`) for the Sphinx project.
 
 .. code-block:: bash
 
