@@ -14,7 +14,7 @@ TigerVNC scraping server is available on :ref:`APT <apt-guide>` as :code:`tigerv
 
 .. code-block:: bash
 
-   $ sudo apt install tigervnc-scraping-server
+   $ apt install tigervnc-scraping-server
 
 Generate VNC Password Configuration
 -----------------------------------

@@ -15,7 +15,7 @@ MyST is available on :ref:`pip <pip-guide>` as :code:`myst-parser` package.
 
 .. code-block:: bash
 
-   $ pip install myst-parser
+   $ pip install -U myst-parser
 
 Configure MyST in a Sphinx Project
 ----------------------------------

@@ -8,6 +8,7 @@ This website contains collection of guides that commonly used by `ICHIRO ITS <ht
    :maxdepth: 1
 
    documentation-guide/sphinx-guide.rst
+   documentation-guide/doxygen-guide.rst
 
 .. toctree::
    :caption: Debian Package Guide
@@ -20,6 +21,12 @@ This website contains collection of guides that commonly used by `ICHIRO ITS <ht
    :maxdepth: 1
 
    remote-guide/vnc-guide.rst
+
+.. toctree::
+   :caption: C++ Guide
+   :maxdepth: 1
+
+   cpp-guide/cpp-guide.rst
 
 .. toctree::
    :caption: Python Guide
