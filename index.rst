@@ -41,3 +41,10 @@ This website contains collection of guides that commonly used by `ICHIRO ITS <ht
    :glob:
 
    legacy_guide/*
+
+.. toctree::
+   :caption: Simulation Guide
+   :maxdepth: 1
+
+   simulation-guide/webots-guide/webots-setup-from-source.rst
+   simulation-guide/webots-guide/webots-setup-using-apt.rst
