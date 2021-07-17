@@ -36,6 +36,12 @@ This website contains collection of guides that commonly used by `ICHIRO ITS <ht
    python-guide/pip-guide.rst
 
 .. toctree::
+   :caption: Simulation Guide
+   :maxdepth: 1
+
+   simulation-guide/webots-guide.rst
+
+.. toctree::
    :caption: Legacy Guide
    :maxdepth: 1
    :glob:
